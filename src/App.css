@@ -1,0 +1,19 @@
+/**
+ * App Component Styles
+ * Estilos para el contenedor principal de la aplicación
+ */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-top: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+}
+
+

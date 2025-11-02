@@ -1,0 +1,26 @@
+/**
+ * Estilos Globales
+ * Punto de entrada principal para todos los estilos del proyecto
+ * 
+ * Estructura modular:
+ * 1. Variables - Paleta de colores y tokens de diseño
+ * 2. Reset - Normalización de estilos del navegador
+ * 3. Base - Estilos fundamentales para elementos HTML
+ * 4. Components - Componentes reutilizables
+ * 5. Utilities - Clases de utilidad
+ */
+
+/* Variables y Tokens de Diseño */
+@import './styles/variables.css';
+
+/* Reset de Estilos del Navegador */
+@import './styles/reset.css';
+
+/* Estilos Base */
+@import './styles/base.css';
+
+/* Componentes Base */
+@import './styles/components.css';
+
+/* Clases de Utilidad */
+@import './styles/utilities.css';
