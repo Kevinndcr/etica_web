@@ -1,0 +1,1 @@
+export { EventPromo } from './EventPromo';

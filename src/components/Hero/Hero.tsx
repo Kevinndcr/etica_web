@@ -206,16 +206,43 @@ export const Hero = ({ className = '' }: HeroProps) => {
 
           {/* Title */}
           <h1 className="hero-title">
-            Propiedad Intelectual en<br />
-            <span className="hero-title-highlight">Tecnologías de la Información</span>
+            Regulaciones Jurídicas y los Fundamentos de la<br />
+            <span className="hero-title-highlight">Propiedad Intelectual en TI</span>
           </h1>
 
           {/* Subtitle */}
           <p className="hero-subtitle">
-            Explora el marco legal de la propiedad intelectual aplicado a las TI. 
-            Derechos de autor, patentes, licencias de software y protección de datos 
-            bajo la legislación costarricense y tratados internacionales.
+            Charla virtual sobre el marco legal que protege la innovación tecnológica. 
+            Análisis profundo de legislación costarricense y tratados internacionales 
+            aplicables al desarrollo de software y tecnologías de la información.
           </p>
+
+          {/* Topics Preview */}
+          <div className="hero-topics">
+            <div className="topic-pill">
+              <svg className="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+              </svg>
+              <span>Derechos de Autor en TI</span>
+            </div>
+            <div className="topic-pill">
+              <svg className="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span>Patentes en Tecnologías</span>
+            </div>
+            <div className="topic-pill">
+              <svg className="topic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+              <span>Desafíos Éticos Actuales</span>
+            </div>
+          </div>
 
           {/* Meta Info */}
           <div className="hero-meta">

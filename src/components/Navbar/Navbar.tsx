@@ -36,10 +36,11 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
   };
 
   const navLinks = [
-    { name: 'Inicio', id: 'inicio' },
-    { name: 'Sobre la Charla', id: 'charla' },
-    { name: 'Temario', id: 'temario' },
-    { name: 'Expositores', id: 'expositores' },
+    { name: 'Inicio', id: 'inicio', href: '#' },
+    { name: 'Evento', id: 'evento', href: '#evento' },
+    { name: 'Temario', id: 'temario', href: '#temario' },
+    { name: 'Agenda', id: 'agenda', href: '#agenda' },
+    { name: 'En Vivo', id: 'envivo', href: '#envivo' },
   ];
 
   return (
@@ -64,7 +65,7 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
             {navLinks.map((link, index) => (
               <a
                 key={link.id}
-                href={`#${link.id}`}
+                href={link.href}
                 className={`navbar-link ${activeLink === link.id ? 'active' : ''}`}
                 onClick={() => handleLinkClick(link.id)}
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -72,6 +73,17 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
                 {link.name}
               </a>
             ))}
+            <a 
+              href="#registro" 
+              className="navbar-cta"
+              onClick={() => handleLinkClick('registro')}
+            >
+              <span>Registrarse</span>
+              <svg className="navbar-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -95,11 +107,16 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
 
       {/* Mobile Menu */}
       <div className={`navbar-mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+        <div className="navbar-mobile-header">
+          <div className="navbar-mobile-logo">
+            <img src={logoUTN} alt="Logo UTN" />
+          </div>
+        </div>
         <div className="navbar-mobile-links">
           {navLinks.map((link, index) => (
             <a
               key={link.id}
-              href={`#${link.id}`}
+              href={link.href}
               className={`navbar-mobile-link ${activeLink === link.id ? 'active' : ''}`}
               onClick={() => handleLinkClick(link.id)}
               style={{ animationDelay: `${index * 0.05}s` }}
@@ -108,6 +125,17 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
             </a>
           ))}
         </div>
+        <a 
+          href="#registro" 
+          className="navbar-mobile-cta"
+          onClick={() => handleLinkClick('registro')}
+        >
+          <span>Registrarse Ahora</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
       </div>
     </>
   );
